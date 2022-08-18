@@ -4,6 +4,10 @@ double.addEventListener('click', function () {
     const inputFieldValueString = inputField.value;
     const inputFieldValue = parseFloat(inputFieldValueString);
     inputField.value = '';
+    if (isNaN(inputFieldValue)) {
+        alert('Please Input A Number');
+        return;
+    }
     const clickDouble = inputFieldValue * 2;
     const resultBox = document.getElementById('result-box');
     resultBox.innerText = clickDouble;
@@ -19,6 +23,10 @@ triple.addEventListener('click', function () {
     const inputFieldValueString = inputField.value;
     const inputFieldValue = parseFloat(inputFieldValueString);
     inputField.value = '';
+    if (isNaN(inputFieldValue)) {
+        alert('Please Input A Number');
+        return;
+    }
     const clickTriple = inputFieldValue * 3;
     const resultBox = document.getElementById('result-box');
     resultBox.innerText = clickTriple;
